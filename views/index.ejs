@@ -2,191 +2,168 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Simple Sidebar - Start Bootstrap Template</title>
-
-    <!-- Custom CSS -->
-
-   <link href="https://fonts.googleapis.com/css?family=Courgette|Playball" rel="stylesheet">
-    <link href = "/stylesheets/bootstrap.css" rel = "stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Refined Taste</title>
+    <!-- JAVASCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20121008/json2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min.js"></script>
     <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
     <script src="https://cdn.firebase.com/libs/backfire/0.3.0/backbone-firebase.min.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-    <script src = "/javascripts/movie.js"></script>
+    <!-- CUSTOM JAVASCRIPT -->
+    <script src="../public/javascripts/movie.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../public/stylesheets/bootstrap.css" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link href="../public/stylesheets/style.css" rel="stylesheet">
 
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Playball" rel="stylesheet">
+    <!-- HEAD SCRIPT -->
     <script>
     $("#test p").addClass("load");
-
-      // Initialize Firebase
-      var config = {
+    // Initialize Firebase
+    var config = {
         apiKey: "AIzaSyDWkq31oA16BBiln0l6x3qui8SSM9wVw9I",
         authDomain: "test-c5b4d.firebaseapp.com",
         databaseURL: "https://test-c5b4d.firebaseio.com",
         storageBucket: "test-c5b4d.appspot.com",
         messagingSenderId: "257288456763"
-      };
-      firebase.initializeApp(config);
+    };
+    firebase.initializeApp(config);
     </script>
-
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" style = "font-family: 'Playball', cursive; font-size:38px;">Refined Taste</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      </ul>
-     
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-user fa-2x">Settings</i></a></li>
-        <li class="dropdown">
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</head>
-
-               <!--- NAV BAR ENDS -->
-<body>
-<script>
-  (function() {
-    var cx = '011258649733202402229:nggpo7mhuz8';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-
-<div class = "container">
-
-
-<gcse:searchbox></gcse:searchbox>
-
-<style>
-div.items p:first-child {
-  display: block; 
-}
-</style>
-
-<div class = "row-fluid">
-  <div class="col-md-3">
-  <div class="tab">
-    <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')">Pantry</a>
-    <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">Filters</a>
-  </div>
-
-<div class = "items">
-  <div id="London" class="tabcontent">
-      <form class="navbar-form">
-        <div class="form-group">
-          <input type="text" class="form-control" id = "movieName" placeholder="Update pantry" onkeypress="return saveToList(event)" />
+    <!-- NAVBAR -->
+    <h1 class="navbar-brand" href="#">Refined Taste</h1>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-user fa-2x">Settings</i></a></li>
+                    <li class="dropdown">
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <ol id="favMovies">
-        <!-- LIST GOES HERE --> 
-      </ol>
-  </div>
+        <!-- /.container-fluid -->
+    </nav>
+</head>
+<!--- NAV BAR ENDS -->
 
-
-      </form>
-
-  <div id="Paris" class="tabcontent">
-<input type="checkbox" name="vehicle" value="And">And
-<input type="checkbox" name="vehicle" value="Or">Or 
-</form><br>
-
-           <ol id="filters">
-        <!-- LIST GOES HERE -->
-        </ol>
-       </div>
-
-</div><!-- column -->
-</div>
-<div class="col-md-8">
-  <div class="panel panel-default">
-    <div class="panel-body" style = "width:100%">
-
-
-<div id = "test">
-  <div class="flex-row row">
-
-    
-
-<gcse:searchresults></gcse:searchresults>
-
-
-
-  </div>
-  <!-- /.flex-row  -->
-</div>
-<!-- /.container  -->
-
-</div>
-</div>
-  </div>
-</div>
-</div><!-- row -->
-
-
-
- <script>
-      function hndlr(response) {
-      for (var i = 0; i < response.items.length; i++) {
-        var item = response.items[i];
-        // in production code, item.htmlTitle should have the HTML entities escaped.
-        document.getElementById("content").innerHTML += "<br>" + item.htmlTitle;
-      }
+<body>
+    <div class="container">
+        <gcse:searchbox></gcse:searchbox>
+        <style>
+        div.items p:first-child {
+            display: block;
+        }
+        </style>
+        <div class="row-fluid">
+            <div class="col-md-3">
+                <div class="tab">
+                    <a href="javascript:void(0)" class="tablinks active" onclick="openTab(event, 'pantryTab')">Pantry</a>
+                    <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'filterTab')">Filters</a>
+                </div>
+                <div class="items">
+                    <div id="pantryTab" class="tabcontent" style="display: block;">
+                        <form class="navbar-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="movieName" placeholder="Update pantry" onkeypress="return saveToList(event)" />
+                            </div>
+                            <ol id="favMovies">
+                                <!-- LIST GOES HERE -->
+                            </ol>
+                    </div>
+                    </form>
+                    <div id="filterTab" class="tabcontent">
+                        <input type="checkbox" name="vehicle" value="And">And</input>
+                        <input type="checkbox" name="vehicle" value="Or">Or</input>
+                        </form>
+                        <br>
+                        <ol id="filters">
+                            <!-- LIST GOES HERE -->
+                        </ol>
+                    </div>
+                </div>
+                <!-- column -->
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body" style="width:100%">
+                        <div id="test">
+                            <div class="flex-row row">
+                                <gcse:searchresults></gcse:searchresults>
+                            </div>
+                            <!-- /.flex-row  -->
+                        </div>
+                        <!-- /.container  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- row -->
+    <script>
+    function hndlr(response) {
+        for (var i = 0; i < response.items.length; i++) {
+            var item = response.items[i];
+            // in production code, item.htmlTitle should have the HTML entities escaped.
+            document.getElementById("content").innerHTML += "<br>" + item.htmlTitle;
+        }
     }
     </script>
-
-
-</div><!-- container -->
-<script>
-
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    </div>
+    <!-- container -->
+    <script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
-     
+    </script>
     <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
-
+    <!-- BODY SCRIPT -->
+    <script>
+    (function() {
+        var cx = '011258649733202402229:nggpo7mhuz8';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+    })();
+    </script>
 </body>
-</html> 
+
+</html>
